@@ -53,7 +53,7 @@ async def online(_, message):
     )
 
 
-@client.on_message(filters.command("stream", PREFIX) & filters.user(SUDO))
+@client.on_message(filters.command("play", PREFIX) & filters.user(SUDO))
 async def stream(_, message):
     txt = message.text.split(" ", 1)
     type_ = None
@@ -100,7 +100,7 @@ async def resume(_, message):
     await message.reply_text("Resumed playing.")
 
 
-@client.on_message(filters.command("play", PREFIX) & filters.user(SUDO))
+@client.on_message(filters.command("song", PREFIX) & filters.user(SUDO))
 def song(_, message):
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
