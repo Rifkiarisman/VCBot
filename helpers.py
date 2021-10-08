@@ -5,7 +5,7 @@ class Text:
     helper = """
 **Available Commands:**\n
   - `{x}on` - __check if the (user)bot is online.__
-  - `{x}stream <url/reply to song file>` - __play song in vc.__ 
+  - `{x}play <url/reply to song file>` - __play song in vc.__ 
   - `{x}pause` - __pause track.__
   - `{x}resume` - __resumes the paused track.__
   - `{x}song <song name>` - __donwload the song.__
