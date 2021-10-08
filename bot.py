@@ -48,7 +48,7 @@ pycalls = Wrapper(pytgcalls, "raw")
 @client.on_message(filters.command("on", PREFIX) & filters.user(SUDO))
 async def online(_, message):
     await message.reply_text(
-        f"**I'm on.**\n{Text.how_to}\n\nRepo: [GitHub](https://github.com/xditya/VCBot)",
+        f"**Yes Sir, Im Alive!**",
         disable_web_page_preview=True,
     )
 
@@ -100,7 +100,7 @@ async def resume(_, message):
     await message.reply_text("Resumed playing.")
 
 
-@client.on_message(filters.command("song", PREFIX) & filters.user(SUDO))
+@client.on_message(filters.command("play", PREFIX) & filters.user(SUDO))
 def song(_, message):
     query = "".join(" " + str(i) for i in message.command[1:])
     print(query)
